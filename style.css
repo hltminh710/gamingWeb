@@ -1,0 +1,592 @@
+/* Reset cơ bản */
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+p{
+        font-family: cursive;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
+}
+
+
+/* Top Banner */
+.top-banner {
+    height: 40px;
+    color: #ff5555;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.7);
+}
+.social-icons {
+    display: flex;            /* Đặt các phần tử con nằm trên một dòng */
+    align-items: center;      /* Căn giữa theo chiều dọc */
+    gap: 10px;                /* Khoảng cách giữa các phần tử, điều chỉnh tuỳ ý */
+}
+
+.social-icons p {
+    margin: 0;                /* Xóa khoảng cách mặc định của thẻ <p> */
+}
+
+.social-icons a img {
+    width: 24px;              /* Kích thước của icon, điều chỉnh theo nhu cầu */
+    height: 24px;             /* Kích thước của icon */
+}
+
+
+.logo_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 90vh;
+    justify-content: space-around;
+    margin-top: 70px;
+}
+.video_youtube{
+    /* height: 70vh;
+    width: 60vw; */
+    padding-right: 50px;
+}
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo img {
+    width: 36vw;
+    height: 80vh;
+    object-fit: cover;
+}
+
+.ad-banner img {
+    max-width: 100%;
+    height: auto;
+    margin-top: -10px;
+}
+
+/* Navigation Menu */
+.navbar {
+    position: fixed;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100vw;
+    justify-content: space-between;
+    padding: 10px 60px;
+    z-index: 1000;
+}
+
+/* Màu nền khi cuộn */
+.navbar.scrolled {
+    background-color: #222222; 
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+}
+
+.navbar ul li {
+    position: relative;
+}
+
+.navbar ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.navbar ul li a:hover {
+    background-color: #ff5555;
+}
+
+.navbar ul li a::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background-color: #bb2a55;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0.3s, opacity 0.3s;
+}
+
+.navbar ul li:hover a::before {
+    visibility: visible;
+    opacity: 1;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    align-content: last baseline;
+    position: relative;
+}
+
+.search-box input {
+    padding: 5px;
+    border: 2px solid white;
+    color: white;
+    border-radius: 20px;
+    outline: none;
+    background-color: transparent;
+    height: 36px;
+    padding-left: 16px;
+}
+
+.search-box button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    position: absolute;
+    right: 14px;
+    top: 9px;
+}
+
+.search-icon {
+    color: white;
+    font-weight: bold;
+}
+
+.search-btn {
+    width: 124px;
+    height: 40px;
+    border-radius: 124px;
+    color: white;
+    font-weight: 600;
+    background: rgb(209, 54, 57);
+    border: none;
+}
+
+/* Game Section */
+.game-section {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: linear-gradient(180deg, rgba(27,26,26,1) 21%, rgba(71,66,67,1) 73%, rgba(106,101,101,1) 100%);
+
+}
+
+.game {
+    background-color: #111;
+    padding: 15px;
+    width: 22%;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+}
+
+.game img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.game h3 {
+    font-size: 12px;
+    color: #ff5555;
+    margin-bottom: 5px;
+}
+
+.game h2 {
+    font-size: 18px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+.game p {
+    text-align: center;
+}
+.game:hover{
+    background-color: #272222;
+}
+.rating {
+    font-size: 14px;
+    color: #ffcc00;
+    margin-bottom: 10px;
+}
+
+.description {
+    font-size: 14px;
+    color: #ccc;
+    line-height: 1.5;
+}
+
+
+ .container {
+            display: flex;
+            padding: 20px;
+        }
+        .main-content, .sidebar {
+            padding: 20px;
+        }
+        .main-content {
+            flex: 2;
+        }
+       
+        .game-item {
+            transition: background-color 0.3s ease; /* Hiệu ứng mượt */
+            display: flex;
+            margin-bottom: 30px;
+            border-bottom: 1px solid #444;
+            padding: 15px;
+            cursor: pointer;
+        }
+        .game-item:hover {
+            background-color: #ff5555;
+        }
+        .game-item img {
+            width: 100%; /* Chiều rộng ảnh sẽ tối đa 100% của phần ảnh */
+            width: 250px; /* Chiều rộng tối đa của ảnh */
+            height: 250px;
+            display: block;
+            margin-right: 20px; /* Khoảng cách giữa ảnh và các mục bên phải */
+            object-fit: cover;
+        }
+        .game-item h3 {
+            margin: 0 0 10px;
+            font-size: 1.5em;
+        }
+        .game-item p {
+            text-indent: 20px; /* hoặc giá trị khác bạn muốn */
+            text-align: justify;
+            width: 662px;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+        .game-item .rating {
+            color: #f1c40f;
+            margin-bottom: 5px;
+        }
+        .sidebar {
+            flex: 1;
+            border-left: 1px solid #444;
+            background-color: rgba(29,31,31,1);
+        }
+        .sidebar h2 {
+            font-size: 1.3em;
+            border-bottom: 2px solid #e74c3c;
+            padding-bottom: 5px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+        }
+        .sidebar ul li img {
+            width: 80px;
+            height: 80px;
+            margin-right: 10px;
+            object-fit: cover;
+        }
+        .sidebar li:hover {
+            background-color: #ff5555;
+        }
+        .sidebar ul li span {
+            vertical-align: middle;
+        }
+
+        /* Footer container styling */
+footer {
+    position: relative;
+    background: #111;
+    color: #fff; /* Màu chữ trắng */
+    padding: 40px 0;
+    min-height: 100px;
+    padding: 20px 50px;
+    margin-top: 100px;
+    font-family: cursive;
+  }
+  .wave {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: url("img/svg\ \(4\).png");
+    background-size: 1000px 100px;
+  }
+  .footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Footer logo and description in one column */
+ 
+  
+  .footer-logo img  {
+    object-fit: cover;
+    width: 300px;
+    height: 200px;
+
+  }
+  
+  .footer-description p {
+    font-size: 14px;
+    color: #888; /* Màu chữ xám nhạt */
+    line-height: 1.8;
+    margin-top: 10px; /* Khoảng cách giữa logo và mô tả */
+    max-width: 400px; /* Giới hạn chiều rộng của đoạn mô tả */
+  }
+  
+  /* Latest games section */
+  .footer-latest-games,
+  .footer-categories,
+  .footer-tags {
+    flex-basis: 18%; /* Mỗi cột chiếm 18% diện tích */
+  }
+  
+  .footer-latest-games h2,
+  .footer-categories h2,
+  .footer-tags h2 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff; /* Màu chữ trắng */
+    margin-bottom: 10px;
+  }
+  
+  .footer-latest-games ul,
+  .footer-categories ul,
+  .footer-tags ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-latest-games li,
+  .footer-categories li,
+  .footer-tags li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #ccc; /* Màu chữ xám nhạt */
+  }
+  
+  .footer-latest-games li:hover,
+  .footer-categories li:hover,
+  .footer-tags li:hover {
+    color: #fff; /* Khi hover thì chuyển màu trắng */
+  }
+  
+  .footer-latest-games li,
+  .footer-categories li {
+    cursor: pointer;
+  }
+  
+  /* Styling for tags */
+  .footer-tags ul li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  
+  .footer-tags ul li a {
+    color: #ccc;
+    text-decoration: none;
+    padding: 5px 10px;
+    border: 1px solid #555;
+    border-radius: 3px;
+    font-size: 12px;
+  }
+  
+  .footer-tags ul li a:hover {
+    background-color: #f00; /* Đổi màu nền khi hover sang đỏ */
+    color: #fff;
+    border-color: #f00;
+  }
+  
+  /* Adjust tag layout */
+  .footer-tags ul {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
+  
+  .footer-tags ul li {
+    margin-bottom: 5px;
+    padding: 5px 0px;
+  }
+
+
+
+  
+  .wave#wave1 {
+    z-index: 1000;
+    opacity: 1;
+    bottom: 0;
+    animation: animateWaves 4s linear infinite;
+  }
+  
+  .wave#wave2 {
+    z-index: 999;
+    opacity: 0.5;
+    bottom: 10px;
+    animation: animate 4s linear infinite !important;
+  }
+  
+  .wave#wave3 {
+    z-index: 1000;
+    opacity: 0.2;
+    bottom: 15px;
+    animation: animateWaves 3s linear infinite;
+  }
+  
+  .wave#wave4 {
+    z-index: 999;
+    opacity: 0.7;
+    bottom: 20px;
+    animation: animate 3s linear infinite;
+  }
+  
+  @keyframes animateWaves {
+    0% {
+      background-position-x: 1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+  
+  @keyframes animate {
+    0% {
+      background-position-x: -1000px;
+    }
+    100% {
+      background-positon-x: 0px;
+    }
+  }
+
+
+
+
+  /* Responsive */
+  @media screen and (max-width: 768px) {
+    .footer-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .footer-logo-description,
+    .footer-latest-games,
+    .footer-categories,
+    .footer-tags {
+      margin-bottom: 30px;
+      flex-basis: 100%;
+    }
+  }
+  
+
+/* Video Background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Đặt video nằm phía dưới */
+    filter: brightness(0.5);
+}
+
+.video-background video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo video bao phủ toàn bộ trang */
+}
+
+/* Nội dung chính */
+.content {
+    position: relative; /* Đảm bảo nội dung nằm trên video */
+    z-index: 1;
+    color: white; /* Đặt màu chữ dễ đọc trên nền video */
+}
+
+
+/* Làm trong suốt */
+ .navbar, .top-banner, header {
+    background: transparent; /* Làm trong suốt hoàn toàn */
+    box-shadow: none; /* Xóa đường viền hoặc bóng nếu có */
+    border: none; /* Xóa đường viền dưới nếu được áp dụng */
+}
+
+/* Đặt màu chữ và các nội dung để dễ nhìn trên nền video */
+.game-section a {
+    color: #fff; /* Màu chữ trắng */
+}
+
+/* Container chính */
+.title-default {
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    padding: 10px 15px;
+    position: relative;
+    margin-bottom: 24px;
+}
+
+/* Phần "WHAT'S NEW" */
+.new-title {
+    background-color: #ff2851; /* Màu đỏ chủ đạo */
+    padding: 5px 15px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    border-left: 5px solid #7b1e3a; /* Thanh dọc bên trái */
+}
+
+/* Đường gạch dưới */
+.title-default::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #ff2851; /* Gạch đỏ */
+}
+
+/* Phần "XEM TẤT CẢ" */
+.more {
+    margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff2851; /* Màu chữ đỏ */
+    text-decoration: none;
+    border: 1px solid #ff2851; /* Viền đỏ */
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+/* Hover cho "XEM TẤT CẢ" */
+.more:hover {
+    background-color: #ff2851; /* Nền đỏ khi hover */
+    color: #fff; /* Chữ trắng khi hover */
+}
